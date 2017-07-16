@@ -10,4 +10,19 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Customize to your needs...
+source "${HOME}/.promptline.sh"
+
+# The following lines were added by compinstall
+
+zstyle ':completion:*' completer _complete _ignored
+zstyle ':completion:*' matcher-list ''
+zstyle :compinstall filename '/home/koz4k/.zshrc'
+
+autoload -Uz compinit
+compinit
+
+# End of lines added by compinstall
+
+if [[ $TERM != *-* ]]; then
+  export TERM="$TERM-256color"
+fi
