@@ -26,3 +26,5 @@ compinit
 if [[ $TERM != *-* ]]; then
   export TERM="$TERM-256color"
 fi
+
+export LANG=en_US.UTF-8
